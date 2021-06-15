@@ -1,0 +1,36 @@
+Version:
+
+You should have 3.6 or higher version of python installed on the system.
+
+Libraries:
+
+You can install required python libraries by executing listed commands on the system:
+
+1. pip3 install boto3
+2. pip3 install json
+3. pip3 install time
+4. pip3 install botocore
+5. pip3 install tqdm
+
+Running the Alter compression Utility:
+
+Once the pre-requisites are satisfied, You can then run the column encoding utility by
+typing python3 Alter_Compression_Utility.py or ./Alter_Compression_Utility.py
+
+This will generate the following Usage instructions:
+
+Arguments:
+
+        argv[1] - Cluster Identifier: Name of the Cluster
+        argv[2] - Database Name: Default database name that is required for connecting to cluster
+        argv[3] - Secret Identifier: Secret ARN/Friendly name of the secret for retrieving user and password of the cluster
+        argv[4] - Schema Name: Name of the schema that user wants to analyze and compress tables for
+        argv[5] - Compression Mode: Three modes of compression for users to choose from and pass as argument
+
+                compress-all: Automatically analyze and compress required columns for all the tables for the schema
+                compress-small: Based on provided threshold value, Automatically analyze and compress required columns for tables < threshold value in TB for the schema
+                compress-large: Based on provided threshold value,  Automatically analyze and compress required columns for tables > threshold value in TB for the schema
+
+        argv[6] - Threshold value: Threshold value upon which small/large table size in TBs will be defined. The value is not required for compress-all mode.
+
+As per required, Please pass the command line arguments as needed to execute the utility.
