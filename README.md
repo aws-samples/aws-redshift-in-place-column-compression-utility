@@ -13,14 +13,20 @@ Key-Features:
   - Command line Arguments: The utility is completely dynamic and outputs based on user input:
     
     o Cluster identifier name
+    
     o Database Name
+    
     o Secret Id - Username and Password
+    
     o Schema Name
+    
     o Compression Mode: The command line argument passed as a user input enables
     them to custom configure for a mode of compression:
     
        Compress-all: The utility automatically analyze and compress required columns for all the tables in the provided schema.
+       
        Compress-small: Based on provided threshold value, The utility automatically analyze and compress required columns for              tables < threshold value in TB for the provided schema
+       
        Compress-large: Based on provided threshold value, The utility automatically analyze and compress required columns for              tables > threshold value in TB for the provided schema
     
     o Threshold Value: This is a user passed value in Terabytes that is required for Compress-small and Compress-large modes. Based     on the value and Compression mode, the utility will automatically analyze/compress tables less or greater than the threshold         value in size.
